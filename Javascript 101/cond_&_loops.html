@@ -1,0 +1,58 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            // Number 1
+
+            function lessThanFour(string){
+                if (string.length < 4){
+                    return 'Too Small'
+                } else if (string.length > 12){
+                    return 'Too Big'
+                } else {
+                    return 'Accepted'
+                }
+            }
+            console.log(lessThanFour('Hello'))
+
+            // Single line version
+            const singleLineIf = testString => testString.length < 4 ? 'Too Short' : testString.length > 12 ? 'Too Big' : 'Accepted'
+            
+            console.log(singleLineIf('wow'))
+
+            // -----------------------------------------------
+
+            // Number 2
+
+            const tempColor = temp => {
+                switch (true) {
+                    case (temp < 0) :
+                        return 'blue';
+                        break;
+                    case (temp > 0 && temp < 20) :
+                        return 'purple';
+                        break;
+                    case (temp >= 20 && temp < 40):
+                        return 'green';
+                        break;
+                    case (temp >= 40 && temp < 60):
+                        return 'yellow';
+                        break;
+                    case (temp >= 60 && temp < 80):
+                        return 'orange';
+                        break;
+                    case (temp >= 80 && temp < 100):
+                        return 'red';
+                        break;
+                    default:
+                        return 'Out of range';
+                        break
+                }
+            }
+
+            console.log(tempColor(35))
+        </script>
+    </body>
+</html>

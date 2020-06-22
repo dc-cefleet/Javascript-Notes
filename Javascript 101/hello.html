@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Hello Javascript</title>
+    </head>
+    <body>
+        <h1>Hello World</h1>
+        <script>
+            console.log('Hello World');
+            function helloWorld(){
+                console.log('Hello Java')
+            }
+            helloWorld()
+
+            function addNum(num1, num2){
+                return num1 + num2
+            }
+            console.log(addNum(2, 3))
+
+            let myFuncVar = function(){
+                console.log('Weird way to write function')
+            }
+            myFuncVar()
+
+            const myArrowFunc = (param1, param2) => {
+                console.log(param1, param2)
+            }
+            myArrowFunc(2,3)
+
+            const myArrowFunc2 = (param1, param2) => param2 + param1
+            console.log(myArrowFunc2(1,2))
+
+            let myFunc = () => {
+                console.log('This is the first part')
+                return() => {
+                    console.log('This is another item')
+                }
+            }
+            let anotherVar = myFunc()
+            anotherVar()
+            myFunc()()
+        </script>
+    </body>
+</html>

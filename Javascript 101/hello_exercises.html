@@ -1,0 +1,76 @@
+<html>
+    <head></head>
+    <body>
+        <script>
+            // Number 1
+
+            function myName(name, age){
+                console.log('Hello my name is',name,'I am',age,'years old.')
+            }
+            myName('Jordan', 26)
+
+            let myName2 = (name, age) => 'Hello my name is ' + name + ' I am ' + age + ' years old.'
+            myName2('Jordan', 26)
+
+            let myName3 = function(name, age){
+                console.log(`Hello my name is ${name} I am ${age} years old.`)
+            }
+            myName3('Jordan', 26)
+
+            // -----------------------------------------------
+
+            // Number 2
+            
+            let doAfter = (param1) => {
+                console.log('Look I was called')
+            }
+
+            function mainFunction(callback, secondParam){
+                console.log('Main Function Executing')
+                callback(secondParam)
+            }
+            mainFunction(myParam => console.log('I used to have '+myParam), '20 dollars')
+            
+            // -----------------------------------------------
+
+            // Number 3
+
+            let myFunc = () => {
+                console.log('Parent Function Called')
+                return () => {
+                    console.log('Child Function Called')
+                }
+            }
+            let anotherVar = myFunc()
+            anotherVar()
+
+            // -----------------------------------------------
+
+            // Random Testing
+
+            let isOn = false
+            let buttonText = isOn ? 'Turn Off' : 'Turn On'
+            console.log(buttonText)
+
+            function lessThanFour(string){
+                if (string.length < 4){
+                    return 'Too Small'
+                } else if (string.length > 12){
+                    return 'Too Big'
+                } else {
+                    return 'Accepted'
+                }
+            }
+            console.log(lessThanFour('Hello'))
+
+            const singleLineIf = testString => testString.length < 4 ? 'Too Short' : testString.length > 12 ? 'Too Big' : 'Accepted'
+            
+            console.log(singleLineIf('wow'))
+
+            for(let i = 0; i < 10; i++){
+                console.log(`Clone #514${i} : Clone #514${i} checking in for duty!`)
+            }
+            
+        </script>
+    </body>
+</html>

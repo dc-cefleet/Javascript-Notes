@@ -1,0 +1,139 @@
+<html>
+    <head>
+        <style>
+            html{
+                background: black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // Madlib
+
+            const madLib = (name, subject) =>{
+                return `${name}'s favorite subject in school is ${subject}.`;
+            }
+            console.log(madLib('Jordan','math'));
+
+            // ------------------------------------------------------------
+
+            // Tip Calculator
+
+            const tipAmount = (amount, service) =>{
+                let tip = 0;
+                if (service == 'good'){
+                    tip = 0.2;
+                } else if (service == 'fair'){
+                    tip = 0.15;
+                } else if (service == 'bad'){
+                    tip = 0.1;
+                } else {
+                    return;
+                }
+                let finalTip = amount * tip
+                return finalTip
+            }
+
+            console.log(tipAmount(100, 'bad'))
+
+            // ------------------------------------------------------------
+            
+            // Tip Calculator 2
+
+            const totalAmount = (amount, service) =>{
+                let tip = 0;
+                if (service == 'good'){
+                    tip = 0.2;
+                } else if (service == 'fair'){
+                    tip = 0.15;
+                } else if (service == 'bad'){
+                    tip = 0.1;
+                } else {
+                    return;
+                }
+                let finalBill = amount + (amount * tip)
+                return finalBill
+            }
+
+            console.log(totalAmount(100, 'good'))
+
+            // ------------------------------------------------------------
+            
+            // Print Numbers
+
+            const printNumbers = (start, end) =>{
+                for (i = start; i <= end; i++){
+                    console.log(i)
+                }
+            }
+
+            printNumbers(1,10)
+
+            // ------------------------------------------------------------
+            
+            // Print a Square
+
+            const printSquare = num =>{
+                string = '';
+                for(i = 0; i < num; i++){
+                    string = string + '*'
+                }
+                for(i = 0; i < num; i++){
+                    console.log(string)
+                }
+            }
+
+            printSquare(5)
+
+            // ------------------------------------------------------------
+            
+            // Print a Box
+
+            const printBox = (height, width) =>{
+                string1 = ''
+                string2 = ''
+                for (i = 0; i < width; i++){
+                    string1 = string1 + '*'
+                    if (i == 0 || i == (width -1)){
+                        string2 = string2 + '*'
+                    } else {
+                        string2 = string2 + ' '
+                    }
+                }
+                for (i = 0; i < height; i++){
+                    if (i == 0 || i == (height - 1)){
+                        console.log(string1)
+                    } else {
+                        console.log(string2)
+                    }
+                }
+                
+            }
+
+            printBox(5,5)
+
+            // ------------------------------------------------------------
+            
+            // Print a Banner
+
+            const printBanner = banString =>{
+                borderStr = ''
+                midStr = '- ' + banString + ' -'
+                for (i = 0; i < (banString.length + 4); i++){
+                    borderStr = borderStr + '-'
+                }
+                console.log(borderStr);
+                console.log(midStr);
+                console.log(borderStr);
+            }
+            
+            printBanner('This is my example string')
+
+            // ------------------------------------------------------------
+            
+            // Leetspeak
+
+            
+        </script>
+    </body>
+</html>

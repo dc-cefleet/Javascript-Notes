@@ -1,6 +1,10 @@
 <html>
     <head>
-
+        <style>
+            html{
+                background: black;
+            }
+        </style>
     </head>
     <body>
         <script>
@@ -31,7 +35,7 @@
                     case (temp < 0) :
                         return 'blue';
                         break;
-                    case (temp > 0 && temp < 20) :
+                    case (temp >= 0 && temp < 20) :
                         return 'purple';
                         break;
                     case (temp >= 20 && temp < 40):
@@ -48,11 +52,69 @@
                         break;
                     default:
                         return 'Out of range';
-                        break
+                        break;
                 }
             }
 
-            console.log(tempColor(35))
+            console.log(tempColor(-5))
+
+            // -----------------------------------------------
+
+            // Number 3
+
+            let biggerArray = []
+            function bigArray([par1, par2, par3, par4, par5]){
+                for(let i = 0; i < 100; i++){
+                biggerArray.push(par1);
+                }
+                for(let i = 0; i < 100; i++){
+                biggerArray.push(par2);
+                }
+                for(let i = 0; i < 100; i++){
+                biggerArray.push(par3);
+                }
+                for(let i = 0; i < 100; i++){
+                biggerArray.push(par4);
+                }
+                for(let i = 0; i < 100; i++){
+                biggerArray.push(par5);
+                }
+            }
+            bigArray(['one','two','three','four','five'])
+            console.log(biggerArray)
+
+
+            // Second better way to do this 
+
+            const nameList = ['one','two','three','four','five'];
+            
+            const makeCopies = myArr =>{
+                let outArray = []
+                for(let i = 0; i < myArr.length; i++) {
+                    outArray[i] = []
+                    for(let j = 0; j < 100; j++){
+                        outArray[i].push(myArr[i])
+                    }
+                }
+                return outArray
+            }
+            console.log(makeCopies(nameList))
+
+            // Third Way 
+
+            nameList.map(e=>`${e}/`.repeat(100).split("/",100))
+            console.log(nameList)
+
+            // This is just testing string methods
+
+            let greeting = 'Hi how are you?'
+            let newGreeting = greeting.replace('Hi', 'Hola')
+            console.log(newGreeting)
+
+            // This is just testing array methods
+
+            const methArr = ['uno','dos','tres','cuatro','cinco']
+
         </script>
     </body>
 </html>

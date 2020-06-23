@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <style>
+            html{
+                background: black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            let names = ['jon', 'bob', 'katie', 'mike', 'alexa']
+            names.forEach(function(name){
+                console.log(name)
+            })
+
+            const callback = (item, index) => {
+                console.log(`${index + 1}. ${item}`)
+            }
+            names.forEach(callback)
+
+            // ---------------------------------------------------
+
+            let teams = ['UF','UT','UGA','LSU','BAMA']
+
+            let template = {
+                name:null,
+                skill: 'bad',
+                colors: 'ugly'
+            }
+
+            teams.forEach((name,index)=>{
+                newObject = Object.assign({},template)
+                newObject.name = name
+
+                if(name == 'UF'){
+                    newObject.skill = 'great'
+                    newObject.colors = 'beautiful'
+                } else if (name == 'UGA'){
+                    newObject.skill = 'very bad'
+                    newObject.colors = 'extremely ugly'
+                }
+
+                teams[index] = newObject
+            })
+
+            console.log(teams)
+
+            // ---------------------------------------------------
+
+            let nums = ['one','two','three','four']
+
+            nums.map(num => `${num}/`.repeat(10).split('/',10))
+        </script>
+    </body>
+</html>

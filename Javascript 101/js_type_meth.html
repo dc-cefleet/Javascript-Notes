@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            html{
+                background: black;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            // Example 1
+
+            const upperString = string =>{
+                const test = /[A-Z]/g;
+                const upper = string.match(test)
+                return upper.join('')
+            }
+
+            console.log(upperString('Hello my Name is Jordan rivers'))
+
+            // ---------------------------------------------
+
+            // Example 2
+
+            const sortKeys = object =>{
+                keyArr = Object.keys(object)
+                return keyArr.sort()
+            }
+
+            console.log(sortKeys({
+                c:'cat',
+                b:'bear',
+                a:'apple'
+            }
+            ))
+
+            // ---------------------------------------------
+
+            // Example 3
+
+            const greaterThan = (testArr, num) => {
+                return testArr.find(i => i > num)
+            }
+
+            console.log(greaterThan([1,3,5,7,9,34,12,99], 10))
+
+            // ---------------------------------------------
+
+            // Example 4
+
+            const joinObj = (obj1, obj2) =>{
+                newObj = Object.assign({},obj1,obj2)
+                return newObj
+            }
+
+            console.log(joinObj({a:1,b:2},{c:3,d:4}))
+        </script>
+    </body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="root"></div>
+        <script>
+            let main = document.getElementById('root')
+
+            // Added Header
+
+            let header = document.createElement('h1')
+            header.append('About Jordan Rivers')
+            main.append(header)
+
+            // Adding Navbar
+
+            let navbar = document.createElement('nav')
+            main.append(navbar)
+
+            // Adding list to navbar and items to list and links to items
+
+            let navList = document.createElement('ul')
+            navList.setAttribute('class', 'navlist')
+            navbar.append(navList)
+
+            let liImg = document.createElement('li')
+            let linkImg = document.createElement('a')
+            linkImg.append('Images')
+            linkImg.setAttribute('href', '#images')
+            liImg.append(linkImg)
+            
+            let liDesc = document.createElement('li')
+            let linkDesc = document.createElement('a')
+            linkDesc.append('Description')
+            linkDesc.setAttribute('href', '#description')
+            liDesc.append(linkDesc)
+
+            let liList = document.createElement('li')
+            let linkList = document.createElement('a')
+            linkList.append('List of Likes and Dislikes')
+            linkList.setAttribute('href', '#likes')
+            liList.append(linkList)
+
+            navList.append(liImg, liDesc, liList)
+
+            // Adding Images div and image to div
+
+            let divImg = document.createElement('div')
+            divImg.setAttribute('id','images')
+            main.append(divImg)
+
+            let ufImg = document.createElement('img')
+            ufImg.setAttribute('src', 'uf.jpg')
+            ufImg.setAttribute('alt', 'UF Picture')
+
+            divImg.append(ufImg)
+
+            // Adding Description div
+            let divDesc = document.createElement('div')
+            divDesc.setAttribute('id', 'description')
+            main.append(divDesc)
+
+            let h2 = document.createElement('h2')
+            h2.append('Description About Me')
+            divDesc.append(h2)
+
+            const pDescMake = string =>{
+                let pDesc = document.createElement('p')
+                pDesc.append(string)
+                divDesc.append(pDesc)
+            }
+
+            pDescMake('My name is Jordan Rivers')
+            pDescMake('I graduated from the University of Florida. I have always been a Gators fan and always will be!')
+            pDescMake('I graduated with a degree in Agricultural Operations, but now I am going into programming')
+
+            // Adding Likes and Dislikes Lists div
+
+            let divLikes = document.createElement('div')
+            divLikes.setAttribute('id', 'likes')
+            main.append(divLikes)
+
+            let h3 = document.createElement('h3')
+            h3.append('Likes and Dislikes')
+            divLikes.append(h3)
+
+            let likeHead = document.createElement('div')
+            let likeP = document.createElement('p')
+            likeP.append('These are things I liked about UF:')
+            let likeList = document.createElement('ul')
+            likeList.setAttribute('class', 'likes')
+            likeHead.append(likeP, likeList)
+            
+            let dislikeHead = document.createElement('div')
+            let dislikeP = document.createElement('p')
+            dislikeP.append('These are things i disliked about UF:')
+            let dislikeList = document.createElement('ul')
+            dislikeList.setAttribute('class', 'likes')
+            dislikeHead.append(dislikeP, dislikeList)
+
+            divLikes.append(likeHead, dislikeHead)
+
+            // Adding to those lists
+
+            const addList = (list, item) =>{
+                let newList = document.createElement('li')
+                newList.append(item)
+                list.append(newList)
+            }
+
+            addList(likeList, 'Great sports')
+            addList(likeList, 'Quality education')
+            addList(likeList, 'Good Friends')
+            addList(dislikeList, 'It was very hot')
+            addList(dislikeList, 'It rained every day')
+            addList(dislikeList, 'Lots of traffic')
+
+        </script>
+    </body>
+</html>

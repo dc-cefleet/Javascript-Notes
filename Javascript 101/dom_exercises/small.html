@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 id="heading"></h1>
+        <ul id="list">
+            <li id="lettuce" class="green list-item">Lettuce</li>
+            <li id="tomato" class="red list-item">Tomato</li>
+            <li id="cheese" class="yellow list-item">Cheese</li>
+            <li id="burger">Burger</li>
+        </ul>
+        <script>
+            // Added heading
+            let head1 = document.getElementById('heading')
+            head1.innerText = 'Toppings'
+
+            // Added class
+            let burger = document.getElementById('burger')
+            burger.setAttribute('class', 'brown list-item')
+
+            // Created new li element
+            let newLi = document.createElement('li')
+            newLi.append('Onion')
+            newLi.setAttribute('id','onion')
+            newLi.setAttribute('class', 'white list-item')
+
+            topList = document.getElementById('list')
+            topList.append(newLi)
+        </script>
+    </body>
+</html>

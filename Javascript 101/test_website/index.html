@@ -49,7 +49,31 @@
             item.parentNode.removeChild(item)
 
             let aHTMLCollection_ = document.getElementsByClassName('extra')
+            console.log(aNodeList_)
+            console.log(aHTMLCollection_)
 
+            const createCard = (title, content, extra) =>{
+                let newSection = document.createElement('section')
+                let newH2 = document.createElement('h2')
+                newH2.innerText = title
+                
+                let newP = document.createElement('p')
+                newP.append(content)
+
+                let newP2 = document.createElement('p')
+                newP2.append(extra)
+
+                newSection.append(newH2, newP, newP2)
+                console.log(newSection)
+
+                newP2.setAttribute('class', 'extra')
+
+                let docBody = document.getElementById('mainContent')
+                docBody.append(newSection)
+            }
+
+            createCard('Jordan', "He's a gator fan", 'He went to school there')
+            createCard('Alligators', 'They are reptiles','This means they are cold blooded')
         </script>
     </body>
 </html>

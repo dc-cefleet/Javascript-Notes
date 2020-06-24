@@ -8,7 +8,7 @@
     </head>
     <body>
         <script>
-            let charecters = [
+            let characters = [
     {
         "name": "Luke Skywalker", 
         "height": "172", 
@@ -276,23 +276,55 @@
             // ----------------------------------------------------------------
             
             // Part 1
-            const onlyNames = charecters.map(name => {
+            const onlyNames = characters.map(name => {
                 return name.name
             })
 
             console.log(onlyNames)
 
             // Part 2
-
-            const greaterFifty = charecters.map(char => {
-                char.name = name
-                char.mass = mass
+            
+            // const greaterFifty = charecters.map(char=>parseInt(char.mass)>50 ? {name: char.name, mass: char.mass} : null)
+            
+            // heres a forEach example
+            const greaterFifty = []
+            characters.forEach(char =>{
                 if (parseInt(char.mass) > 50){
-                    return char.mass
+                    greaterFifty.push({name: char.name, mass: char.mass})
                 }
             })
 
             console.log(greaterFifty)
+
+            const charsAndMass = characters.filter(char =>{
+                if (parseInt(char.mass) > 50){
+                    return true
+                }
+                return false
+            }).map(char => {return {name: char.name, mass: char.mass}})
+            
+            console.log(charsAndMass)
+            // Part 3
+
+            const hasShip = characters.filter(char =>{
+                if (char.starships.length > 0){
+                    return true
+                }
+                return false
+            }).map(char => {return {name:char.name, hasStarship: 'Yes'}})
+
+            console.log(hasShip)
+
+            // Part 4
+
+            const hasVehicles = characters.filter(char =>{
+                if (char.starships.length > 0 && char.vehicles.length > 0){
+                    return true
+                }
+                return false
+            }).map(char => {return {name:char.name, hasStarship: 'Yes', hasVehicle: 'Yes'}})
+
+            console.log(hasVehicles)
             </script>
     </body>
 </html>

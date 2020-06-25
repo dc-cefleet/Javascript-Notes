@@ -1,0 +1,38 @@
+html{
+    text-align: center;
+    background: blue;
+    color: blue;
+}
+h1{
+    padding: 20px;
+    font-size: 50px;
+}
+div{
+    background: orange;
+    margin: 20px;
+}
+.navlist {
+    list-style-type: none;
+    margin: 0 0 60px 0;
+    padding: 0px;
+}
+.navlist li{
+    display: inline;
+    padding: 5px;
+    border: dashed blue;
+    margin: 0px 5px;
+}
+.section{
+    margin: 20px;
+}
+.likes{
+    display: inline-block;
+}
+.likes li{
+    text-align: start;
+}
+h2, h3{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
